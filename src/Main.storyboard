@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Birddex" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k3T-dh-CM0">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UDf-g5-uZp">
+                                <rect key="frame" x="134" y="584" width="107" height="61"/>
+                                <state key="normal" title="Button" image="BirdCapture"/>
+                                <state key="selected" title="BirdSelected" image="BirdSelected.png"/>
+                                <state key="highlighted" title="BirdSelected" image="BirdSelected.png"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZKA-4l-RPu" userLabel="Bars">
+                                <rect key="frame" x="308" y="589" width="51" height="51"/>
+                                <state key="normal" title="Bars" image="Menu Bars"/>
+                                <connections>
+                                    <action selector="MainHistoryButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5En-71-osJ"/>
+                                    <segue destination="2bJ-lb-jO5" kind="custom" customClass="MaintoHistorySegue" customModule="Birddex" customModuleProvider="target" id="Sb3-HN-mBK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NHv-GT-854">
+                                <rect key="frame" x="12" y="582" width="66" height="65"/>
+                                <state key="normal" title="Arrow" image="Arrow"/>
+                                <connections>
+                                    <action selector="MainMapButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IY2-f2-bC9"/>
+                                    <segue destination="ech-b9-pHQ" kind="custom" customClass="MaintoMap" customModule="Birddex" customModuleProvider="target" id="1HR-gP-I1l"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ZKA-4l-RPu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="308" id="2fb-MV-cT5"/>
+                            <constraint firstItem="k3T-dh-CM0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="3KE-gB-5xy"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="UDf-g5-uZp" secondAttribute="trailing" constant="134" id="6qQ-1V-IJF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ZKA-4l-RPu" secondAttribute="bottom" constant="27" id="8wO-dE-aJu"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NHv-GT-854" secondAttribute="trailing" constant="297" id="EpI-wc-ZKS"/>
+                            <constraint firstItem="UDf-g5-uZp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="134" id="JeK-rj-rVZ"/>
+                            <constraint firstItem="ZKA-4l-RPu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="569" id="N0M-NO-fgn"/>
+                            <constraint firstItem="k3T-dh-CM0" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="QPn-Z7-wp1"/>
+                            <constraint firstItem="k3T-dh-CM0" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="QQl-1P-yyG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZKA-4l-RPu" secondAttribute="trailing" constant="16" id="UYe-XN-yc1"/>
+                            <constraint firstItem="NHv-GT-854" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="562" id="aPF-Zb-TML"/>
+                            <constraint firstItem="UDf-g5-uZp" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="564" id="cNg-q3-Qgk"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="UDf-g5-uZp" secondAttribute="bottom" constant="22" id="o4Z-hA-0YN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="NHv-GT-854" secondAttribute="bottom" constant="20" id="uZ4-P7-FLU"/>
+                            <constraint firstItem="k3T-dh-CM0" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="up2-xc-xkm"/>
+                            <constraint firstItem="NHv-GT-854" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="12" id="xDt-dz-1D9"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="birdCaptureButton" destination="UDf-g5-uZp" id="7qm-Ao-kaP"/>
+                        <outlet property="previewView" destination="k3T-dh-CM0" id="Wj5-lf-EOd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140" y="133.5832083958021"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="0Zo-1I-ve4">
+            <objects>
+                <viewController id="2bJ-lb-jO5" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ujN-zW-AjD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i3U-gg-XKj">
+                                <rect key="frame" x="16" y="589" width="51" height="51"/>
+                                <state key="normal" title="Button" image="Menu Bars"/>
+                                <connections>
+                                    <segue destination="Q0d-bT-5Qc" kind="unwind" customClass="HistorytoMainSegue" customModule="Birddex" customModuleProvider="target" unwindAction="HistorytoMainSegueWithSegue:" id="Ej1-l7-imb"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="i3U-gg-XKj" firstAttribute="top" secondItem="NKl-bD-nJa" secondAttribute="top" constant="569" id="4DO-Cf-aIc"/>
+                            <constraint firstItem="NKl-bD-nJa" firstAttribute="trailing" secondItem="i3U-gg-XKj" secondAttribute="trailing" constant="308" id="7aD-f3-qGc"/>
+                            <constraint firstItem="i3U-gg-XKj" firstAttribute="leading" secondItem="NKl-bD-nJa" secondAttribute="leading" constant="16" id="EO4-tJ-Xrb"/>
+                            <constraint firstItem="NKl-bD-nJa" firstAttribute="bottom" secondItem="i3U-gg-XKj" secondAttribute="bottom" constant="27" id="TOX-QD-vI3"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="NKl-bD-nJa"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="T7T-rp-13Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Q0d-bT-5Qc" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="860" y="134"/>
+        </scene>
+        <!--Map-->
+        <scene sceneID="k7m-5C-q6K">
+            <objects>
+                <viewController id="ech-b9-pHQ" customClass="Map" customModule="Birddex" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Gsu-LP-D6O">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="satellite" showsScale="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ox0-gx-DgG">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cY1-rv-rsa">
+                                <rect key="frame" x="298" y="582" width="65" height="65"/>
+                                <state key="normal" title="Arrow" image="RevArrow"/>
+                                <connections>
+                                    <segue destination="3E6-DM-Gp3" kind="unwind" customClass="MaptoMain" customModule="Birddex" customModuleProvider="target" unwindAction="MaptoMainSegueWithSegue:" id="V2P-oF-wiw"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="cY1-rv-rsa" firstAttribute="top" secondItem="t8Y-Z9-w9s" secondAttribute="top" constant="562" id="3wE-fV-J4Z"/>
+                            <constraint firstItem="cY1-rv-rsa" firstAttribute="leading" secondItem="t8Y-Z9-w9s" secondAttribute="leading" constant="298" id="nAW-Yn-HBN"/>
+                            <constraint firstItem="t8Y-Z9-w9s" firstAttribute="bottom" secondItem="cY1-rv-rsa" secondAttribute="bottom" constant="20" id="ncg-cu-F5c"/>
+                            <constraint firstItem="t8Y-Z9-w9s" firstAttribute="trailing" secondItem="cY1-rv-rsa" secondAttribute="trailing" constant="12" id="vdR-kO-feB"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="t8Y-Z9-w9s"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="701-qn-ppq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="3E6-DM-Gp3" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="-623.20000000000005" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Arrow" width="1152" height="1152"/>
+        <image name="BirdCapture" width="918" height="486"/>
+        <image name="BirdSelected.png" width="918" height="486"/>
+        <image name="Menu Bars" width="1152" height="1152"/>
+        <image name="RevArrow" width="576" height="576"/>
+    </resources>
+</document>
